@@ -3,7 +3,7 @@ import { Skeleton } from "@/shared/components/ui/skeleton";
 export function LogsSkeleton() {
   return (
     <div className="space-y-5">
-      <Skeleton className="h-32 w-full rounded-lg" />
+      <Skeleton className="h-64 w-full rounded-lg" />
       <div className="flex items-center justify-between">
         <Skeleton className="h-5 w-32" />
         <Skeleton className="h-7 w-48" />
