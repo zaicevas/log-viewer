@@ -1,0 +1,151 @@
+{
+  "resourceLogs": [
+    {
+      "resource": {
+        "droppedAttributesCount": 0,
+        "attributes": [
+          { "key": "service.namespace", "value": { "stringValue": "api" } },
+          { "key": "service.name", "value": { "stringValue": "auth-service" } },
+          { "key": "service.version", "value": { "stringValue": "1.0.0" } }
+        ]
+      },
+      "scopeLogs": [
+        {
+          "scope": {
+            "name": "test-scope",
+            "version": "1.0.0",
+            "droppedAttributesCount": 0,
+            "attributes": []
+          },
+          "logRecords": [
+            {
+              "timeUnixNano": "1779461861000000000",
+              "observedTimeUnixNano": "1779461861000000000",
+              "severityNumber": 9,
+              "severityText": "INFO",
+              "body": { "stringValue": "auth start" },
+              "attributes": [],
+              "droppedAttributesCount": 0
+            },
+            {
+              "timeUnixNano": "1779461862000000000",
+              "observedTimeUnixNano": "1779461862000000000",
+              "severityNumber": 13,
+              "severityText": "WARN",
+              "body": { "stringValue": "token nearing expiry" },
+              "attributes": [],
+              "droppedAttributesCount": 0
+            },
+            {
+              "timeUnixNano": "1779461863000000000",
+              "observedTimeUnixNano": "1779461863000000000",
+              "severityNumber": 17,
+              "severityText": "ERROR",
+              "body": { "stringValue": "invalid credentials" },
+              "attributes": [],
+              "droppedAttributesCount": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "resource": {
+        "droppedAttributesCount": 0,
+        "attributes": [
+          { "key": "service.namespace", "value": { "stringValue": "api" } },
+          { "key": "service.name", "value": { "stringValue": "billing-service" } },
+          { "key": "service.version", "value": { "stringValue": "2.1.0" } }
+        ]
+      },
+      "scopeLogs": [
+        {
+          "scope": {
+            "name": "test-scope",
+            "version": "1.0.0",
+            "droppedAttributesCount": 0,
+            "attributes": []
+          },
+          "logRecords": [
+            {
+              "timeUnixNano": "1779461864000000000",
+              "observedTimeUnixNano": "1779461864000000000",
+              "severityNumber": 9,
+              "severityText": "INFO",
+              "body": { "stringValue": "invoice issued" },
+              "attributes": [],
+              "droppedAttributesCount": 0
+            },
+            {
+              "timeUnixNano": "1779461865000000000",
+              "observedTimeUnixNano": "1779461865000000000",
+              "severityNumber": 9,
+              "severityText": "INFO",
+              "body": { "stringValue": "payment captured" },
+              "attributes": [],
+              "droppedAttributesCount": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "resource": {
+        "droppedAttributesCount": 0,
+        "attributes": [
+          { "key": "service.namespace", "value": { "stringValue": "jobs" } },
+          { "key": "service.name", "value": { "stringValue": "worker" } },
+          { "key": "service.version", "value": { "stringValue": "0.5.0" } }
+        ]
+      },
+      "scopeLogs": [
+        {
+          "scope": {
+            "name": "test-scope",
+            "version": "1.0.0",
+            "droppedAttributesCount": 0,
+            "attributes": []
+          },
+          "logRecords": [
+            {
+              "timeUnixNano": "1779461866000000000",
+              "observedTimeUnixNano": "1779461866000000000",
+              "severityNumber": 9,
+              "severityText": "INFO",
+              "body": { "stringValue": "job dequeued" },
+              "attributes": [],
+              "droppedAttributesCount": 0
+            },
+            {
+              "timeUnixNano": "1779461867000000000",
+              "observedTimeUnixNano": "1779461867000000000",
+              "severityNumber": 9,
+              "severityText": "INFO",
+              "body": { "stringValue": "job complete" },
+              "attributes": [],
+              "droppedAttributesCount": 0
+            },
+            {
+              "timeUnixNano": "1779461868000000000",
+              "observedTimeUnixNano": "1779461868000000000",
+              "severityNumber": 13,
+              "severityText": "WARN",
+              "body": { "stringValue": "retry after backoff" },
+              "attributes": [],
+              "droppedAttributesCount": 0
+            },
+            {
+              "timeUnixNano": "1779461869000000000",
+              "observedTimeUnixNano": "1779461869000000000",
+              "severityNumber": 17,
+              "severityText": "ERROR",
+              "body": { "stringValue": "dead-letter queue full" },
+              "attributes": [],
+              "droppedAttributesCount": 0
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`buildInvestigationPrompt > matches snapshot for a realistic full-featured log 1`] = `
+"I'm investigating a single log entry from an OpenTelemetry (OTLP) backend.
+Help me understand what it means and what to look at next.
+
+## The log
+
+- **Time:** 2026-05-25T13:37:42.123Z
+- **Observed:** 2026-05-25T13:37:44.200Z
+- **Severity:** ERROR (17)
+- **Service:** backend / auth-service @ 2.4.1
+- **Scope:** auth.middleware @ 1.0.0
+- **Attributes:**
+  - \`user.id\`: 12345
+  - \`request.id\`: abc-def-ghi
+  - \`http.method\`: POST
+  - \`http.route\`: /api/sessions
+- **Scope attributes:**
+  - \`library.lang\`: node
+- **Body:**
+\`\`\`
+Token validation failed: expired signature
+\`\`\`
+
+## Questions
+
+1. In plain terms, what is this log most likely telling me?
+2. List 3–5 plausible root causes, ranked by likelihood, with the reasoning for each.
+3. What should I investigate next — other services to check, time windows to widen, attributes to filter on, related patterns to search for?
+4. Is this typically a transient/expected condition or a signal of a deeper problem?"
+`;

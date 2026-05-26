@@ -1,0 +1,75 @@
+{
+  "resourceLogs": [
+    {
+      "resource": {
+        "droppedAttributesCount": 0,
+        "attributes": [
+          { "key": "service.namespace", "value": { "stringValue": "playwright" } },
+          { "key": "service.name", "value": { "stringValue": "fixture" } },
+          { "key": "service.version", "value": { "stringValue": "1.0.0" } }
+        ]
+      },
+      "scopeLogs": [
+        {
+          "scope": {
+            "name": "test-scope",
+            "version": "1.0.0",
+            "droppedAttributesCount": 0,
+            "attributes": []
+          },
+          "logRecords": [
+            {
+              "timeUnixNano": "1779461861000000000",
+              "observedTimeUnixNano": "1779461861000000000",
+              "severityNumber": 9,
+              "severityText": "INFO",
+              "body": { "stringValue": "service started" },
+              "attributes": [
+                { "key": "user.id", "value": { "stringValue": "u_1" } }
+              ],
+              "droppedAttributesCount": 0
+            },
+            {
+              "timeUnixNano": "1779461862000000000",
+              "observedTimeUnixNano": "1779461862000000000",
+              "severityNumber": 13,
+              "severityText": "WARN",
+              "body": { "stringValue": "slow query detected" },
+              "attributes": [],
+              "droppedAttributesCount": 0
+            },
+            {
+              "timeUnixNano": "1779461863000000000",
+              "observedTimeUnixNano": "1779461863000000000",
+              "severityNumber": 17,
+              "severityText": "ERROR",
+              "body": { "stringValue": "request failed: NotFoundError" },
+              "attributes": [
+                { "key": "http.status_code", "value": { "intValue": 404 } }
+              ],
+              "droppedAttributesCount": 0
+            },
+            {
+              "timeUnixNano": "1779461864000000000",
+              "observedTimeUnixNano": "1779461864000000000",
+              "severityNumber": 21,
+              "severityText": "FATAL",
+              "body": { "stringValue": "unrecoverable panic" },
+              "attributes": [],
+              "droppedAttributesCount": 0
+            },
+            {
+              "timeUnixNano": "1779461865000000000",
+              "observedTimeUnixNano": "1779461865000000000",
+              "severityNumber": 1,
+              "severityText": "TRACE",
+              "body": { "stringValue": "shutdown sequence initiated" },
+              "attributes": [],
+              "droppedAttributesCount": 0
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

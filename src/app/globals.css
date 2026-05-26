@@ -1,0 +1,159 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-surface: var(--surface);
+  --color-surface-raised: var(--surface-raised);
+  --color-surface-elevated: var(--surface-elevated);
+  --color-hairline: var(--hairline);
+
+  --color-severity-trace-bg: var(--severity-trace-bg);
+  --color-severity-trace-fg: var(--severity-trace-fg);
+  --color-severity-debug-bg: var(--severity-debug-bg);
+  --color-severity-debug-fg: var(--severity-debug-fg);
+  --color-severity-info-bg: var(--severity-info-bg);
+  --color-severity-info-fg: var(--severity-info-fg);
+  --color-severity-warn-bg: var(--severity-warn-bg);
+  --color-severity-warn-fg: var(--severity-warn-fg);
+  --color-severity-error-bg: var(--severity-error-bg);
+  --color-severity-error-fg: var(--severity-error-fg);
+  --color-severity-fatal-bg: var(--severity-fatal-bg);
+  --color-severity-fatal-fg: var(--severity-fatal-fg);
+
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+}
+
+/* Light mode (not used yet) */
+:root {
+  --background: #fafbfb;
+  --foreground: #16181e;
+  --card: #ffffff;
+  --card-foreground: #16181e;
+  --popover: #ffffff;
+  --popover-foreground: #16181e;
+  --primary: #0d7e74;
+  --primary-foreground: #ffffff;
+  --secondary: #f1f3f5;
+  --secondary-foreground: #16181e;
+  --muted: #f1f3f5;
+  --muted-foreground: #5f6571;
+  --accent: #0d7e74;
+  --accent-foreground: #ffffff;
+  --destructive: #dc2626;
+  --border: #e4e7ec;
+  --input: #e4e7ec;
+  --ring: #0d7e74;
+
+  --surface: #fafbfb;
+  --surface-raised: #ffffff;
+  --surface-elevated: #f5f6f8;
+  --hairline: #e4e7ec;
+
+  --severity-trace-bg: #f1f3f5;
+  --severity-trace-fg: #5f6571;
+  --severity-debug-bg: #e6ebf1;
+  --severity-debug-fg: #3f4856;
+  --severity-info-bg: #dbeafe;
+  --severity-info-fg: #1d4ed8;
+  --severity-warn-bg: #fef3c7;
+  --severity-warn-fg: #92400e;
+  --severity-error-bg: #fee2e2;
+  --severity-error-fg: #b91c1c;
+  --severity-fatal-bg: #fee2e2;
+  --severity-fatal-fg: #7f1d1d;
+
+  --radius: 0.5rem;
+}
+
+/* Dark mode */
+.dark {
+  --background: #0e1014;
+  --foreground: #e8e9ec;
+  --card: #181a20;
+  --card-foreground: #e8e9ec;
+  --popover: #1d1f26;
+  --popover-foreground: #e8e9ec;
+  --primary: #68d8c1;
+  --primary-foreground: #0e1014;
+  --secondary: #242730;
+  --secondary-foreground: #e8e9ec;
+  --muted: #1d1f26;
+  --muted-foreground: #9ba0a8;
+  --accent: #68d8c1;
+  --accent-foreground: #0e1014;
+  --destructive: #e25c5c;
+  --border: #262932;
+  --input: #262932;
+  --ring: #68d8c1;
+
+  --surface: #0e1014;
+  --surface-raised: #181a20;
+  --surface-elevated: #1d1f26;
+  --hairline: #262932;
+
+  --severity-trace-bg: rgba(232, 233, 236, 0.06);
+  --severity-trace-fg: #a0a4ac;
+  --severity-debug-bg: rgba(143, 168, 196, 0.14);
+  --severity-debug-fg: #b6c4d4;
+  --severity-info-bg: rgba(96, 165, 250, 0.17);
+  --severity-info-fg: #a5cbff;
+  --severity-warn-bg: rgba(251, 191, 36, 0.18);
+  --severity-warn-fg: #fcd34d;
+  --severity-error-bg: rgba(248, 113, 113, 0.18);
+  --severity-error-fg: #fca5a5;
+  --severity-fatal-bg: rgba(220, 38, 38, 0.3);
+  --severity-fatal-fg: #f87171;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    @apply font-sans;
+    color-scheme: light;
+  }
+  html.dark {
+    color-scheme: dark;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "cv11", "ss01", "ss03";
+  }
+  /* Tabular numbers so timestamps and counts don't shift width. */
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+  /* Restore pre-v4 Tailwind behavior: hand cursor on interactive buttons. */
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
